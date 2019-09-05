@@ -1,6 +1,6 @@
 # Load Testing Web Server
-Load testing various simple web server for IF4031 Pengembangan Aplikasi Terdistribusi.
-By:
+Load testing various simple web server for IF4031 Pengembangan Aplikasi Terdistribusi.  
+By:  
 13516030 Yonas Adiel Wiguna  
 13516140 Ilham Firdausi Putra
 
