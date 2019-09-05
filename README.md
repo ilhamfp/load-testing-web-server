@@ -1,6 +1,8 @@
-# Load Testing Web-Server
+# Load Testing Web Server
 Load testing various simple web server for IF4031 Pengembangan Aplikasi Terdistribusi.
-
+By:
+13516030 Yonas Adiel Wiguna  
+13516140 Ilham Firdausi Putra
 
 ## Setup
 The test was done in Ubuntu 18.04 using [Apache Benchmark](https://www.tutorialspoint.com/apache_bench/apache_bench_environment_setup.htm).
@@ -9,10 +11,10 @@ Step:
 1. Install [Apache Benchmark](https://www.tutorialspoint.com/apache_bench/apache_bench_environment_setup.htm).
 
 2. Move the html load test file to `/var/www/html/`
-	```
-	$ sudo cp resource/500.html /var/www/html/
-	$ sudo cp resource/20000.html /var/www/html/
-	```
+  ```
+  $ sudo cp resource/500.html /var/www/html/
+  $ sudo cp resource/20000.html /var/www/html/
+  ```
 
 3. Increase max opened files limit in `/etc/security/limits.conf` and run the terminal as root
   ```
@@ -56,7 +58,7 @@ Step:
 ``` bash
 cd socket
 make
-./socket
+sudo ./socket
 ```
 
 * 500 bytes file:
@@ -72,15 +74,15 @@ Requirement: [libevent](https://libevent.org/)
 ``` bash
 cd libevent
 make
-./libevent
+sudo ./libevent
 ```
 
 * 500 bytes file:
   * Command: `ab -n 10000 -c 10000 http://127.0.0.1:8083/500.html`
-  * Output available on result/socket_500.out
+  * Output available on result/libevent_500.out
 * 20000 bytes file:
   * Command: `ab -n 10000 -c 10000 http://127.0.0.1:8083/20000.html`
-  * Failed. Only 8703 requests completed.
+  * Output available on result/libevent_20000.out
 
 ### tornado/3.2.1
 Requirement: [tornado](https://pypi.org/project/tornado/)
